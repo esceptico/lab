@@ -1,0 +1,3 @@
+torch
+transformers>=4.56   # `dtype=` in from_pretrained
+# sae_lens   # only for --sae-release

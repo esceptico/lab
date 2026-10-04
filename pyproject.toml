@@ -1,0 +1,44 @@
+[project]
+name = "lab"
+version = "0.1.0"
+description = "A small research lab for agents: run anything, record every run, compare honestly."
+requires-python = ">=3.13"
+dependencies = [
+    "markdown-it-py>=3",
+    "pydantic>=2.9",
+    "tomlkit>=0.13",
+]
+
+[project.scripts]
+lab = "lab.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lab"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "torch>=2.4",
+    "transformers>=4.56",
+    "numpy>=2",
+    "ruff>=0.16.8",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["E501", "RUF001", "RUF002", "RUF003"]  # long strings in messages; typographic characters are intended
+
+[tool.pytest.ini_options]
+markers = ["network: downloads from the Hugging Face Hub"]
+
+[tool.ruff.format]
+exclude = ["*.md"]  # doc examples are wrapped for reading

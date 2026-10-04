@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lab board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<style>
+<!-- lab:board.css -->
+<!-- lab:figures.css -->
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="bar">
+    <span class="logo">lab</span>
+    <span class="crumb"><span class="sl">/</span><label class="camp"><select id="camp" aria-label="Campaign"></select><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></label><span id="crumbs" class="crumbs"></span></span>
+    <nav class="views" id="views" aria-label="Views"></nav>
+    <button class="theme" type="button" id="theme" aria-label="Switch theme"><svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></svg></button>
+  </header>
+  <div class="body" id="body">
+    <main class="main" id="main"><div class="mainin" id="mainin"></div></main>
+    <aside class="insp" id="insp" aria-label="Run"></aside>
+    <div class="scrim" id="scrim"></div>
+  </div>
+</div>
+<script type="application/json" id="data"><!-- lab:data --></script>
+<script>
+<!-- lab:figures.js -->
+</script>
+<script>
+<!-- lab:board.js -->
+</script>
+</body>
+</html>
